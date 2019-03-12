@@ -1,0 +1,72 @@
+include ./blocks/slide.jade
+include ./blocks/cover.jade
+include ./blocks/quote.jade
+include ./blocks/frame.jade
+
+- var title = "Тестирование фронтенда для разработчиков"
+
+doctype html
+html(lang='ru')
+  head
+    title !{title}
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='shower/themes/ribbon/styles/screen-16x9.css')
+    link(rel='stylesheet', href='theme.css')
+    link(rel='stylesheet', href='slides.css')
+    link(rel='stylesheet', href='highlight/styles/github.css')
+  body.shower.list
+    header.caption
+      h1 !{title}
+    +slide({name: 'cover', header: title, classes:'cover'})
+      p Александра Шинкевич (
+        a(href='https://twitter.com/neesoglasnaja' target="_blank") @neesoglasnaja
+        | )
+      img.cover(src='pictures/bat-signal.jpg')
+    +slide({header: "Кто я?", classes: "label-header right black"})
+      ul
+        li Глава отдела фронтенда, LOVATA
+        li Full-stack Node.js разработчик
+      p
+        img.logo(src="pictures/minskcss.png")
+        img.logo(src="pictures/minskjs.png")
+        img.logo.css-m-js(src="pictures/css-minsk-js.svg")
+      img.cover.height(src='pictures/bg-blur.jpg')
+      img.cover.place.left(src='pictures/about-cover.jpg')
+    +slide({header: "О чем буду говорить?", classes: "label-header black"})
+      ul
+        li Как унифицировать code style (HTML, CSS, JS)
+        li.next Как автоматизировать его проверку
+        li.next Как внедрить проверку в CI
+      img.place.right.cover.height(src='pictures/cave-angle.png')
+    +slide({header: "Подводя итог", classes: "label-header black no-number"})
+      ul
+        li Настроить редактор
+        li.next Подключить линтеры
+        li.next Вести документацию
+        li.next Бить по рукам с помощью <code>git hooks</code>
+        li.next Настроить CI
+      img.place.right.cover.height(src="pictures/end.jpg")
+    +slide({header: "Материалы по теме", classes: "label-header black"})
+      ul
+        li Кодстайл и насилие — Антон Немцев [
+          a(href='https://www.youtube.com/watch?v=HZF3XRNOpGo') Youtube
+          | ]
+        li Как оптимизировать фронтенд — Мария Кабаш [
+          a(href='https://www.youtube.com/watch?v=jcTD-zpY5RM') Youtube
+          | ]
+    +slide({name: 'theend', header: "Вопросы?", shout: true, classes: 'cover label-header'})
+      p.end-link
+        a.bigger(href="http://bit.ly/Standards-MinskCSS" target="_blank") bit.ly/Standards-MinskCSS
+        br
+        | Александра Шинкевич (
+        a(href='https://twitter.com/neesoglasnaja' target="_blank") @neesoglasnaja
+        | )
+      +cover('pictures/batman-comics.jpg')
+
+    .progress
+    script(src='shower/shower.min.js')
+    script(src='highlight/highlight.pack.js')
+
+    script(type='text/javascript') hljs.initHighlightingOnLoad();
