@@ -98,3 +98,7 @@ doc
 
 .DS_Store
 .history
+
+
+*.map
+package-lock.json
