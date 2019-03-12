@@ -3,7 +3,7 @@ include ./blocks/cover.jade
 include ./blocks/quote.jade
 include ./blocks/frame.jade
 
-- var title = "Тестирование фронтенда для разработчиков"
+- var title = "Тестирование фронтенда для&nbsp;разработчиков"
 
 doctype html
 html(lang='ru')
@@ -19,12 +19,15 @@ html(lang='ru')
   body.shower.list
     header.caption
       h1 !{title}
-    +slide({name: 'cover', header: title, classes:'cover'})
-      p Александра Шинкевич (
+    +slide({name: 'cover', header: title, classes:'label-header cover'})
+      p И немного про то, как не быть&nbsp;
+        span.strike мудаком
+        |  ленивым кодером
+      p.author Александра Шинкевич (
         a(href='https://twitter.com/neesoglasnaja' target="_blank") @neesoglasnaja
         | )
-      img.cover(src='pictures/bat-signal.jpg')
-    +slide({header: "Кто я?", classes: "label-header right black"})
+      img.cover(src='pictures/cover.jpg')
+    +slide({header: "Кто я?", classes: "label-header right"})
       ul
         li Глава отдела фронтенда, LOVATA
         li Full-stack Node.js разработчик
@@ -32,15 +35,15 @@ html(lang='ru')
         img.logo(src="pictures/minskcss.png")
         img.logo(src="pictures/minskjs.png")
         img.logo.css-m-js(src="pictures/css-minsk-js.svg")
-      img.cover.height(src='pictures/bg-blur.jpg')
       img.cover.place.left(src='pictures/about-cover.jpg')
-    +slide({header: "О чем буду говорить?", classes: "label-header black"})
+    +slide({header: "О чем буду говорить?", classes: "label-header"})
       ul
-        li Как унифицировать code style (HTML, CSS, JS)
-        li.next Как автоматизировать его проверку
-        li.next Как внедрить проверку в CI
-      img.place.right.cover.height(src='pictures/cave-angle.png')
-    +slide({header: "Подводя итог", classes: "label-header black no-number"})
+        li Требования к макетам
+        li.next Виды тестирования фронтенда
+        li.next Чек-листы
+        li.next Инструменты
+
+    +slide({header: "Подводя итог", classes: "label-header no-number"})
       ul
         li Настроить редактор
         li.next Подключить линтеры
@@ -48,7 +51,7 @@ html(lang='ru')
         li.next Бить по рукам с помощью <code>git hooks</code>
         li.next Настроить CI
       img.place.right.cover.height(src="pictures/end.jpg")
-    +slide({header: "Материалы по теме", classes: "label-header black"})
+    +slide({header: "Материалы по теме", classes: "label-header"})
       ul
         li Кодстайл и насилие — Антон Немцев [
           a(href='https://www.youtube.com/watch?v=HZF3XRNOpGo') Youtube
@@ -58,12 +61,12 @@ html(lang='ru')
           | ]
     +slide({name: 'theend', header: "Вопросы?", shout: true, classes: 'cover label-header'})
       p.end-link
-        a.bigger(href="http://bit.ly/Standards-MinskCSS" target="_blank") bit.ly/Standards-MinskCSS
+        a.bigger(href="http://bit.ly/FrontQA-MoscowCSS" target="_blank") bit.ly/FrontQA-MoscowCSS
         br
         | Александра Шинкевич (
         a(href='https://twitter.com/neesoglasnaja' target="_blank") @neesoglasnaja
         | )
-      +cover('pictures/batman-comics.jpg')
+      +cover('pictures/cover.jpg')
 
     .progress
     script(src='shower/shower.min.js')

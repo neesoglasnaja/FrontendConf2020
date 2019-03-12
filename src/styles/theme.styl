@@ -1,14 +1,18 @@
-main-color = #eb0033
-important-color = #cd0011
+main-color = #fd0215
+important-color = #fd0215
+gray-color = #4a4a4a
 
 .slide::after
-    background main-color
-    height 75px
-.slide::before
-    position absolute
-    top: 75px;
-    right: 100px;
-    height 50px
+    background #eee
+    height 60px
+    width: 60px
+    color: gray-color
+    font-weight: bold
+    padding: 5px 10px
+    top: 20px
+    right: 20px
+    border-radius: 50%
+
 .slide
     padding-top: 75px
     &.right
@@ -71,7 +75,7 @@ important-color = #cd0011
     z-index 2
 
 .tag
-    color #AD1531
+    color #fd0215
 .attr
     color #4F7302
 
@@ -107,6 +111,7 @@ important-color = #cd0011
             padding 10px 30px
             background-color main-color
             color #fff
+            border-radius: 100px
             &.shout
                 width auto
                 margin-left 100px
@@ -250,7 +255,7 @@ mh = 25px
             color #5ed7ff
 
 .shower.list .slide.active
-    box-shadow: 0 0 0 1px main-color, 0 0 0 20px #d2001de3, 0 20px 50px rgba(0,0,0,.3)
+    box-shadow: 0 0 0 1px main-color, 0 0 0 20px #fd0215, 0 20px 50px rgba(0,0,0,.3)
 
 .slide.no-number::after
     visibility: hidden
