@@ -20,9 +20,10 @@ html(lang='ru')
     header.caption
       h1 !{title}
     +slide({name: 'cover', header: title, classes:'label-header cover'})
-      p И немного про то, как не быть&nbsp;
-        span.strike мудаком
-        |  ленивым кодером
+      p
+        span.subtitle Как не быть&nbsp;
+          span.strike мудаком
+          |  ленивым кодером
       p.author Александра Шинкевич (
         a(href='https://twitter.com/neesoglasnaja' target="_blank") @neesoglasnaja
         | )
@@ -58,8 +59,9 @@ html(lang='ru')
             li Иконки
     +slide({header: "", classes: "label-header"})
       +cover('pictures/ui-kit.jpg')
-    +slide({header: "Дизайнер не обязан знать возможности верстки", shout: true, classes: 'label-header captain'})
-      p.captain-text.next Он мыслит и рисует на плоскости
+    +slide({header: "Дизайнер не обязан знать<br>возможности верстки", shout: true, classes: 'label-header captain'})
+      p.captain-text
+        span.subtitle Он мыслит и рисует на плоскости
       img.cover.width(src='pictures/cap.jpg')
     +slide({header: "Шаги к провалу с этапа дизайна", classes: "label-header"})
       ul
@@ -70,11 +72,12 @@ html(lang='ru')
         li.next Вообще все не очень
     +slide({header: "Плохой дизайн в коде", classes: "label-header"})
     +slide({header: "Проще и дешевле исправить дизайн,<br>чем писать плохой код", shout: true, classes: 'label-header captain'})
-      p.captain-text.next Клиенту тоже можно объяснить
+      p.captain-text Клиенту тоже можно объяснить
       img.cover.width(src='pictures/cap.jpg')
     +slide({header: "Хороший UI Kit в коде", classes: "label-header"})
     +slide({header: "Плохой код больно писать и поддерживать", shout: true, classes: 'label-header captain'})
-      p.captain-text.next Никто не любит говнокод
+      p.captain-text
+        span.subtitle Никто не любит говнокод
       img.cover.width(src='pictures/cap.jpg')
     +slide({header: "Не пиши плохой код", shout: true, classes: 'label-header captain'})
       p.captain-text.next Пиши хороший

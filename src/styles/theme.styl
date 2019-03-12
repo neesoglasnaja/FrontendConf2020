@@ -35,7 +35,15 @@ gray-color = #4a4a4a
         padding-left: 550px
     h2
         color #830000
-        font-family: 'Amatic SC'
+        font-family: 'Amatic SC', sans-serif;
+    .subtitle
+        font-family: 'Amatic SC', sans-serif;
+        background-color: #ddd
+        width: auto
+        display: inline-block;
+        font-size: 40px !important
+        padding: 5px 20px;
+        line-height: 50px;
     .formula
         font-size 48px
         margin 50px auto 0
@@ -61,6 +69,11 @@ gray-color = #4a4a4a
             bottom: 15%;
             left 50%
             margin-left: -100px
+    li > ul > li
+        color: #444;
+        line-height: 40px;
+        font-size: 20px;
+
 
 .html
     color #666
@@ -130,11 +143,12 @@ gray-color = #4a4a4a
             color #fff
             border-radius: 100px
             &.shout
-                width auto
-                margin-left 100px
+                width 800px
                 padding-top 20px
                 padding-bottom 20px
                 font-size 90px
+                left: 50%;
+                transform: translate(-50%, -50%);
         &.captain
             h2
                 margin: 0;
@@ -144,6 +158,10 @@ gray-color = #4a4a4a
                 border-radius: 0;
                 position relative
                 font-size: 60px;
+                height: 180px;
+                align-items: center;
+                justify-content: center;
+                display: flex;
                 &::after
                     content: ''
                     background-color: main-color
@@ -153,10 +171,11 @@ gray-color = #4a4a4a
                     position: absolute
                     bottom: -25px;
                     transform: rotate(-10deg) skewY(50deg)
-                    right: 100px;
+                    right: 110px;
+                    z-index -1
             .captain-text
                 position: absolute;
-                bottom: 30%;
+                bottom: 20%;
                 text-align: center;
                 width: 100%;
                 left: 0;
