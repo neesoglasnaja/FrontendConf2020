@@ -38,19 +38,200 @@ html(lang='ru')
       img.cover.place.left(src='pictures/about-cover.jpg')
     +slide({header: "О чем буду говорить?", classes: "label-header"})
       ul
-        li Требования к макетам
+        li Требования к макетам и прототипам
         li.next Виды тестирования фронтенда
         li.next Чек-листы
         li.next Инструменты
-
-    +slide({header: "Подводя итог", classes: "label-header no-number"})
+    +slide({header: "Требования к макетам", shout: true, classes: 'label-header'})
+      img.cover.width(src='pictures/cover-blur.jpg')
+    +slide({header: "Чек-лист требований к макетам", classes: "label-header"})
       ul
-        li Настроить редактор
-        li.next Подключить линтеры
-        li.next Вести документацию
-        li.next Бить по рукам с помощью <code>git hooks</code>
-        li.next Настроить CI
-      img.place.right.cover.height(src="pictures/end.jpg")
+        li Обсуждение макетов ДО разработки
+          +cover('pictures/halfs/comment.jpg')
+        li.next UI Kit
+          +cover('pictures/halfs/ui-kit.jpg')
+          ul.next
+            li (!) Элементы отрисованы для всех версий
+            li Шрифты и типографика, цвета
+            li Цвета, гадиенты, тени и скругления блоков
+            li Кнопки и элементы форм
+            li Иконки
+    +slide({header: "", classes: "label-header"})
+      +cover('pictures/ui-kit.jpg')
+    +slide({header: "Дизайнер не обязан знать возможности верстки", shout: true, classes: 'label-header captain'})
+      p.captain-text.next Он мыслит и рисует на плоскости
+      img.cover.width(src='pictures/cap.jpg')
+    +slide({header: "Шаги к провалу с этапа дизайна", classes: "label-header"})
+      ul
+        li Нет UI Kit, или он плохой
+        li.next Кардинальные изменения UX при Responsive
+        li.next Макеты не по сетке, если она есть
+        li.next Хаотичные отступы, размеры
+        li.next Вообще все не очень
+    +slide({header: "Плохой дизайн в коде", classes: "label-header"})
+    +slide({header: "Проще и дешевле исправить дизайн,<br>чем писать плохой код", shout: true, classes: 'label-header captain'})
+      p.captain-text.next Клиенту тоже можно объяснить
+      img.cover.width(src='pictures/cap.jpg')
+    +slide({header: "Хороший UI Kit в коде", classes: "label-header"})
+    +slide({header: "Плохой код больно писать и поддерживать", shout: true, classes: 'label-header captain'})
+      p.captain-text.next Никто не любит говнокод
+      img.cover.width(src='pictures/cap.jpg')
+    +slide({header: "Не пиши плохой код", shout: true, classes: 'label-header captain'})
+      p.captain-text.next Пиши хороший
+      img.cover.width(src='pictures/cap.jpg')
+    +slide({header: "Хороший дизайн", classes: "label-header"})
+      ul
+        li Типографика вынесена и дублируется для отрисованных версий
+        li Используются стили текста, цвета, бордеры и т.д. только из UI Kit
+        li (Хотя бы) горизонтальные отступы логичны
+        li Нет диких перестроений элементов или UX на разных разрешениях
+        li Интерфейс делится на компоненты
+      p Основные характеристики - системный, продуманный, логичный
+    +slide({header: "Как тестировать", shout: true, classes: 'label-header'})
+      img.cover.width(src='pictures/cover-blur.jpg')
+    +slide({header: "Ручное тестирование", classes: 'label-header'})
+      ol
+        li Визуальное соответствие макету (верстка пиксель-перфект)
+        li Поведение (UX)
+        li Responsive (“дрочим” окошком)
+        li Кроссбраузерность и кроссплатформенность
+          ul
+            li Пункты 1-3 в других браузерах и на других устройствах
+    +slide({header: "1. Верстка: чек-лист", classes: 'label-header'})
+      ul
+        li Выглядит как на макете во всех разрешениях
+          ul
+            li Цвета, шрифты, отступы, картинки и ВСЕ ОСТАЛЬНОЕ
+        li Не ломается при изменении ширины И ВЫСОТЫ
+          ul
+            li Не только мобильный вид, но и изменение масштаба
+            li Очень широкие экраны - растянуть на два монитора по ширине
+        li Компонент на нескольких страницах - проверить ВСЕ вхождения
+        li Контент правильно тянется/обрезается при разном контенте
+    +slide({header: "1. Верстка: чем проверять", classes: 'label-header'})
+      ul
+        li Глазами
+          ul
+            li Сравнить макеты и реальность
+        li Расширения в браузере
+          ul
+            li PerfectPixel для Chrome https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?hl=ru
+            li Grid Ruler для Chrome https://chrome.google.com/webstore/detail/grid-ruler/joadogiaiabhmggdifljlpkclnpfncmj?hl=ru
+    +slide({header: "Увидел проблему в макете - к дизайнеру и менеджеру", shout: true, classes: 'label-header captain'})
+      p.captain-text.next
+        span.strike Пусть знают как ты страдаешь
+        br
+        | Обсудить решение
+      img.cover.width(src='pictures/cap.jpg')
+    +slide({header: "2. Тестирование UX: чек-лист", classes: 'label-header'})
+      ul
+        li Компонент/страница работает как задумано
+        li Есть интерактивность на ховеры
+        li Ничего не ломается/обрезается ВНЕЗАПНО
+        li Нет ошибок в консоли
+        li Интерфейс не зависает и не тормозит
+    +slide({header: "2. Тестирование UX: чем проверять", classes: 'label-header'})
+      ul
+        li Глазами
+          ul
+            li Все должно работать по ТЗ
+            li Не по ТЗ тоже должно работать
+        li Руками
+          ul
+            li Кликать, водить курсором, тыкать пальцем
+            li Все возможные и невозможные сценарии
+            li Даже есть кажется, что так не будут делать (БУДУТ!)
+        li Доступность
+          ul
+            li Перемещение по табам
+    +slide({header: "2. Тестирование форм: чек-лист", classes: 'label-header'})
+      ul
+        li Все позитивные сценарии без ошибок
+        li Валидация негативных сценариев (пытаемся сломать)
+        li Сообщение об ошибке отправки
+        li Успешная отправка
+        li Есть прелоадеры, задержки ввода, нельзя отправить дважды и т.д.
+        li Если многошаговая - проверять все
+    +slide({header: "Во время теста ты - злоумышленник", shout: true, classes: 'label-header captain'})
+      p.captain-text.next Делай сайту больно!
+      img.cover.width(src='pictures/cap.jpg')
+    +slide({header: "3. Responsive: чек-лист", classes: "label-header"})
+      ul
+        li На всех разрешениях
+          ul
+            li На маленьких (320х300)
+            li На больших (два монитора)
+            li При зуме + и -
+            li В мобильном фрейме DevTools и без
+        li На реальных девайсах в основных браузерах
+          ul
+            li Safari для iPhone/iPad
+    +slide({header: "4. Кроссплатформенность и кроссбраузерность", classes: "label-header"})
+      ul
+        li Обязательно
+          ul
+            li Safari для iPhone/iPad и macOS
+            li Chrome под Android
+        li Поворот экрана на устройстве
+        li Расширенный тест при использовании “современных” свойств
+          ul
+            li Все, у чего неполная или частичная поддержка
+            li Все под префиксами
+            li Формы и интерактивные элементы
+            li Модальные окошки и попапы
+            li Анимации
+            li Другие хаки или фоллбэки
+    +slide({header: "Как отлаживать на девайсах", classes: "label-header"})
+      ul
+        li Ngrok для того, чтобы показать удаленно https://ngrok.com/
+        li Chrome под Android - DevTools
+          | https://developers.google.com/web/tools/chrome-devtools/remote-debugging/
+        li Safari iOS на macOS
+          | https://appletoolbox.com/2014/05/use-web-inspector-debug-mobile-safari/
+        li Safari iOS под Windows и Linux
+          | https://washamdev.com/debug-a-website-in-ios-safari-on-windows/
+          | https://blog.idrsolutions.com/2015/02/remote-debugging-ios-safari-on-os-x-windows-and-linux/
+        li Browser Stack
+        li Ghost Lab
+          | https://www.vanamco.com/ghostlab/
+    +slide({header: "Ни один DevTools  не заменит реальный девайс", shout: true, classes: 'label-header captain'})
+      img.cover.width(src='pictures/cap.jpg')
+    +slide({header: "И это каждый раз проверять?!", shout: true, classes: 'label-header'})
+      img.cover.width(src='pictures/cover-blur.jpg')
+    +slide({header: "Смоки-тесты для каждого ПР", classes: "label-header"})
+      ul
+        li Картинка соответствует макету на всех разрешениях
+          ul
+            li Если баг специфический, то и там, где он есть
+            li Если есть подозрение, что где-то может не работать, то проверить
+        li Ожидаемое поведение по ТЗ
+          ul
+            li Ховеры, транзишены и т.д.
+            li Все нажимается, кликается, всплывает, вызывается, появляется и т.д.
+        li Изменение ширины и высоты не ломает ничего
+          ul
+            li Даже если мы одновременно меняем обе оси одновременно
+        li Нет ошибок в консоли
+        li Доки / README исправлены
+    +slide({header: "А если нашел баг не там, где сейчас делаешь?", shout: true, classes: 'label-header'})
+      img.cover.width(src='pictures/cover-blur.jpg')
+    +slide({header: "Видишь баг - исправь", shout: true, classes: 'label-header captain'})
+      p.captain-text.next Даже если делал не ты
+      p.captain-text.next Даже если это другой блок
+      p.captain-text.next Даже если кажется, что “и так сойдет”
+      img.cover.width(src='pictures/cap.jpg')
+    +slide({header: "Видишь баг - исправь", shout: true, classes: 'label-header captain'})
+      p.captain-text.next И говори менеджеру
+      img.cover.width(src='pictures/cap.jpg')
+    +slide({header: "Видишь баг - исправь", shout: true, classes: 'label-header captain'})
+      p.captain-text.next Нет, я не устану это повторять
+      img.cover.width(src='pictures/cap.jpg')
+    +slide({header: "Подводя итог", classes: "label-header"})
+      ul
+        li Смотри на дизайн ПЕРЕД работой
+        li.next Проверяй за собой ПОСЛЕ работы
+        li.next Не бойся обсуждать и вносить изменения в процессе
+        li.next Будь ответственным, черт возьми!
     +slide({header: "Материалы по теме", classes: "label-header"})
       ul
         li Кодстайл и насилие — Антон Немцев [
@@ -59,6 +240,9 @@ html(lang='ru')
         li Как оптимизировать фронтенд — Мария Кабаш [
           a(href='https://www.youtube.com/watch?v=jcTD-zpY5RM') Youtube
           | ]
+    +slide({header: "Не будь мудаком", shout: true, classes: 'label-header captain'})
+      p.captain-text.next Будь котиком!
+      img.cover.width(src='pictures/cap.jpg')
     +slide({name: 'theend', header: "Вопросы?", shout: true, classes: 'cover label-header'})
       p.end-link
         a.bigger(href="http://bit.ly/FrontQA-MoscowCSS" target="_blank") bit.ly/FrontQA-MoscowCSS
