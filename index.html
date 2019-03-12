@@ -76,7 +76,7 @@
     </section>
     <section id="" style="" class="slide  label-header captain">
       <h2 class=" shout">Проще и дешевле исправить дизайн,<br>чем писать плохой код</h2>
-      <p class="captain-text">Клиенту тоже можно объяснить</p><img src="pictures/cap.jpg" class="cover width">
+      <p class="captain-text"><span class="subtitle">Клиенту тоже можно объяснить</span></p><img src="pictures/cap.jpg" class="cover width">
     </section>
     <section id="" style="" class="slide  label-header">
       <h2>Хороший UI Kit в коде</h2>
@@ -86,19 +86,19 @@
       <p class="captain-text"><span class="subtitle">Никто не любит говнокод</span></p><img src="pictures/cap.jpg" class="cover width">
     </section>
     <section id="" style="" class="slide  label-header captain">
-      <h2 class=" shout">Не пиши плохой код</h2>
-      <p class="captain-text next">Пиши хороший</p><img src="pictures/cap.jpg" class="cover width">
+      <h2 class=" shout">Не пиши говнокод</h2>
+      <p class="captain-text next"><span class="subtitle">Пиши хороший код</span></p><img src="pictures/cap.jpg" class="cover width">
     </section>
     <section id="" style="" class="slide  label-header">
       <h2>Хороший дизайн</h2>
       <ul>
-        <li>Типографика вынесена и дублируется для отрисованных версий</li>
-        <li>Используются стили текста, цвета, бордеры и т.д. только из UI Kit</li>
-        <li>(Хотя бы) горизонтальные отступы логичны</li>
+        <li>Типографика для всех версий</li>
+        <li>Используются стили текста, цвета и т.д. только из UI Kit</li>
+        <li>Есть вертикальный ритм</li>
         <li>Нет диких перестроений элементов или UX на разных разрешениях</li>
         <li>Интерфейс делится на компоненты</li>
       </ul>
-      <p>Основные характеристики - системный, продуманный, логичный</p>
+      <p><span class="subtitle">Системный, продуманный, логичный</span></p>
     </section>
     <section id="" style="" class="slide  label-header">
       <h2 class=" shout">Как тестировать</h2><img src="pictures/cover-blur.jpg" class="cover width">
@@ -106,7 +106,7 @@
     <section id="" style="" class="slide  label-header">
       <h2>Ручное тестирование</h2>
       <ol>
-        <li>Визуальное соответствие макету (верстка пиксель-перфект)</li>
+        <li>Визуальное соответствие макету</li>
         <li>Поведение (UX)</li>
         <li>Responsive (“дрочим” окошком)</li>
         <li>Кроссбраузерность и кроссплатформенность
@@ -119,19 +119,10 @@
     <section id="" style="" class="slide  label-header">
       <h2>1. Верстка: чек-лист</h2>
       <ul>
-        <li>Выглядит как на макете во всех разрешениях
-          <ul>
-            <li>Цвета, шрифты, отступы, картинки и ВСЕ ОСТАЛЬНОЕ</li>
-          </ul>
-        </li>
-        <li>Не ломается при изменении ширины И ВЫСОТЫ
-          <ul>
-            <li>Не только мобильный вид, но и изменение масштаба</li>
-            <li>Очень широкие экраны - растянуть на два монитора по ширине</li>
-          </ul>
-        </li>
-        <li>Компонент на нескольких страницах - проверить ВСЕ вхождения</li>
-        <li>Контент правильно тянется/обрезается при разном контенте</li>
+        <li>Выглядит как на макете во всех разрешениях</li>
+        <li>Не ломается при изменении ширины И ВЫСОТЫ</li>
+        <li>Проверить ВСЕ вхождения</li>
+        <li>Тянется/обрезается при разном контенте</li>
       </ul>
     </section>
     <section id="" style="" class="slide  label-header">
@@ -151,15 +142,15 @@
       </ul>
     </section>
     <section id="" style="" class="slide  label-header captain">
-      <h2 class=" shout">Увидел проблему в макете - к дизайнеру и менеджеру</h2>
-      <p class="captain-text next"><span class="strike">Пусть знают как ты страдаешь</span><br>Обсудить решение</p><img src="pictures/cap.jpg" class="cover width">
+      <h2 class=" shout">Увидел проблему в макете -<br>к дизайнеру и менеджеру</h2>
+      <p class="captain-text"><span class="subtitle"><span class="strike">Пусть знают как ты страдаешь</span></span><br><span class="subtitle">Обсудить решение</span></p><img src="pictures/cap.jpg" class="cover width">
     </section>
     <section id="" style="" class="slide  label-header">
       <h2>2. Тестирование UX: чек-лист</h2>
       <ul>
-        <li>Компонент/страница работает как задумано</li>
-        <li>Есть интерактивность на ховеры</li>
-        <li>Ничего не ломается/обрезается ВНЕЗАПНО</li>
+        <li>Работает как задумано</li>
+        <li>Интерактивность на ховеры</li>
+        <li>Не ломается/обрезается ВНЕЗАПНО</li>
         <li>Нет ошибок в консоли</li>
         <li>Интерфейс не зависает и не тормозит</li>
       </ul>
@@ -169,8 +160,7 @@
       <ul>
         <li>Глазами
           <ul>
-            <li>Все должно работать по ТЗ</li>
-            <li>Не по ТЗ тоже должно работать</li>
+            <li>Все должно работать по ТЗ (не по ТЗ тоже должно работать)</li>
           </ul>
         </li>
         <li>Руками
@@ -190,17 +180,15 @@
     <section id="" style="" class="slide  label-header">
       <h2>2. Тестирование форм: чек-лист</h2>
       <ul>
-        <li>Все позитивные сценарии без ошибок</li>
-        <li>Валидация негативных сценариев (пытаемся сломать)</li>
-        <li>Сообщение об ошибке отправки</li>
-        <li>Успешная отправка</li>
-        <li>Есть прелоадеры, задержки ввода, нельзя отправить дважды и т.д.</li>
-        <li>Если многошаговая - проверять все</li>
+        <li>Позитивные сценарии без ошибок и успешная отправка</li>
+        <li>Валидация и сообщения об ошибке</li>
+        <li>Прелоадеры, задержки ввода, не отправить дважды и т.д.</li>
+        <li>Если пошаговая - проверять все</li>
       </ul>
     </section>
     <section id="" style="" class="slide  label-header captain">
       <h2 class=" shout">Во время теста ты - злоумышленник</h2>
-      <p class="captain-text next">Делай сайту больно!</p><img src="pictures/cap.jpg" class="cover width">
+      <p class="captain-text"><span class="subtitle">Делай сайту больно!</span></p><img src="pictures/cap.jpg" class="cover width">
     </section>
     <section id="" style="" class="slide  label-header">
       <h2>3. Responsive: чек-лист</h2>
@@ -213,11 +201,7 @@
             <li>В мобильном фрейме DevTools и без</li>
           </ul>
         </li>
-        <li>На реальных девайсах в основных браузерах
-          <ul>
-            <li>Safari для iPhone/iPad</li>
-          </ul>
-        </li>
+        <li>На реальных девайсах в основных браузерах</li>
       </ul>
     </section>
     <section id="" style="" class="slide  label-header">
@@ -225,15 +209,14 @@
       <ul>
         <li>Обязательно
           <ul>
-            <li>Safari для iPhone/iPad и macOS</li>
+            <li>Safari для iOs и MacOS</li>
             <li>Chrome под Android</li>
           </ul>
         </li>
         <li>Поворот экрана на устройстве</li>
-        <li>Расширенный тест при использовании “современных” свойств
+        <li>Расширенный тест для...
           <ul>
-            <li>Все, у чего неполная или частичная поддержка</li>
-            <li>Все под префиксами</li>
+            <li>Неполной поддержки, префиксы</li>
             <li>Формы и интерактивные элементы</li>
             <li>Модальные окошки и попапы</li>
             <li>Анимации</li>
@@ -245,25 +228,12 @@
     <section id="" style="" class="slide  label-header">
       <h2>Как отлаживать на девайсах</h2>
       <ul>
-        <li>Ngrok для того, чтобы показать удаленно https://ngrok.com/</li>
-        <li>
-          Chrome под Android - DevTools
-          https://developers.google.com/web/tools/chrome-devtools/remote-debugging/
-        </li>
-        <li>
-          Safari iOS на macOS
-          https://appletoolbox.com/2014/05/use-web-inspector-debug-mobile-safari/
-        </li>
-        <li>
-          Safari iOS под Windows и Linux
-          https://washamdev.com/debug-a-website-in-ios-safari-on-windows/
-          https://blog.idrsolutions.com/2015/02/remote-debugging-ios-safari-on-os-x-windows-and-linux/
-        </li>
-        <li>Browser Stack</li>
-        <li>
-          Ghost Lab
-          https://www.vanamco.com/ghostlab/
-        </li>
+        <li><a href="https://ngrok.com/">Ngrok</a> - показать удаленно</li>
+        <li><a href="https://developers.google.com/web/tools/chrome-devtools/remote-debugging/">DevTools Chrome под Android</a></li>
+        <li><a href="https://appletoolbox.com/2014/05/use-web-inspector-debug-mobile-safari/">Мобильный Safari на macOS</a></li>
+        <li><a href="https://washamdev.com/debug-a-website-in-ios-safari-on-windows/">Мобильный Safari под Windows и Linux</a></li>
+        <li><a href="https://www.browserstack.com/">BrowserStack</a> для теста кроссбраузерности</li>
+        <li><a href="https://www.vanamco.com/ghostlab/">Ghost Lab</a> - мультиплатформенная отладка</li>
       </ul>
     </section>
     <section id="" style="" class="slide  label-header captain">
@@ -275,25 +245,11 @@
     <section id="" style="" class="slide  label-header">
       <h2>Смоки-тесты для каждого ПР</h2>
       <ul>
-        <li>Картинка соответствует макету на всех разрешениях
-          <ul>
-            <li>Если баг специфический, то и там, где он есть</li>
-            <li>Если есть подозрение, что где-то может не работать, то проверить</li>
-          </ul>
-        </li>
-        <li>Ожидаемое поведение по ТЗ
-          <ul>
-            <li>Ховеры, транзишены и т.д.</li>
-            <li>Все нажимается, кликается, всплывает, вызывается, появляется и т.д.</li>
-          </ul>
-        </li>
-        <li>Изменение ширины и высоты не ломает ничего
-          <ul>
-            <li>Даже если мы одновременно меняем обе оси одновременно</li>
-          </ul>
-        </li>
+        <li>Картинка соответствует макету на всех разрешениях</li>
+        <li>Ожидаемое поведение по ТЗ</li>
+        <li>Изменение ширины и высоты не ломает ничего</li>
         <li>Нет ошибок в консоли</li>
-        <li>Доки / README исправлены</li>
+        <li>Доки, тесты, README исправлены</li>
       </ul>
     </section>
     <section id="" style="" class="slide  label-header">
@@ -301,17 +257,17 @@
     </section>
     <section id="" style="" class="slide  label-header captain">
       <h2 class=" shout">Видишь баг - исправь</h2>
-      <p class="captain-text next">Даже если делал не ты</p>
-      <p class="captain-text next">Даже если это другой блок</p>
-      <p class="captain-text next">Даже если кажется, что “и так сойдет”</p><img src="pictures/cap.jpg" class="cover width">
+      <p class="captain-text next"><span class="subtitle">Даже если делал не ты</span></p>
+      <p class="captain-text next"><span class="subtitle">Даже если это другой блок</span></p>
+      <p class="captain-text next"><span class="subtitle">Даже если кажется, что “и так сойдет”</span></p><img src="pictures/cap.jpg" class="cover width">
     </section>
     <section id="" style="" class="slide  label-header captain">
-      <h2 class=" shout">Видишь баг - исправь</h2>
-      <p class="captain-text next">И говори менеджеру</p><img src="pictures/cap.jpg" class="cover width">
+      <h2 class=" shout">Исправить долго -<br>заводи баг и TODO в код</h2>
+      <p class="captain-text"><span class="subtitle">И говори менеджеру</span></p><img src="pictures/cap.jpg" class="cover width">
     </section>
     <section id="" style="" class="slide  label-header captain">
-      <h2 class=" shout">Видишь баг - исправь</h2>
-      <p class="captain-text next">Нет, я не устану это повторять</p><img src="pictures/cap.jpg" class="cover width">
+      <h2 class=" shout">О любой непонятной ситуации говори менеджеру</h2>
+      <p class="captain-text next"><span class="subtitle">Нет, я не устану это повторять</span></p><img src="pictures/cap.jpg" class="cover width">
     </section>
     <section id="" style="" class="slide  label-header">
       <h2>Подводя итог</h2>
@@ -322,16 +278,9 @@
         <li class="next">Будь ответственным, черт возьми!</li>
       </ul>
     </section>
-    <section id="" style="" class="slide  label-header">
-      <h2>Материалы по теме</h2>
-      <ul>
-        <li>Кодстайл и насилие — Антон Немцев [<a href="https://www.youtube.com/watch?v=HZF3XRNOpGo">Youtube</a>]</li>
-        <li>Как оптимизировать фронтенд — Мария Кабаш [<a href="https://www.youtube.com/watch?v=jcTD-zpY5RM">Youtube</a>]</li>
-      </ul>
-    </section>
     <section id="" style="" class="slide  label-header captain">
-      <h2 class=" shout">Не будь мудаком</h2>
-      <p class="captain-text next">Будь котиком!</p><img src="pictures/cap.jpg" class="cover width">
+      <h2 class=" shout">Не будь ленивым кодером</h2>
+      <p class="captain-text next"><span class="subtitle">Будь котиком!</span></p><img src="pictures/cap.jpg" class="cover width">
     </section>
     <section id="theend" style="" class="slide  cover label-header">
       <h2 class=" shout">Вопросы?</h2>
