@@ -37,14 +37,17 @@ html(lang='ru')
         img.logo(src="pictures/minskjs.png")
         img.logo.css-m-js(src="pictures/css-minsk-js.svg")
       img.cover.place.left(src='pictures/about-cover.jpg')
-    +slide({header: "О чем буду говорить?", classes: "label-header"})
+    +slide({header: "Очевидные очевидности", classes: "label-header"})
       ul
         li Требования к макетам и прототипам
         li.next Виды тестирования фронтенда
-        li.next Чек-листы
-        li.next Инструменты
-    +slide({header: "Требования к макетам", shout: true, classes: 'label-header'})
-      img.cover.width(src='pictures/cover-blur.jpg')
+        li.next Как тестировать
+        li.next Чем тестировать
+      img.cover.width.next(src='pictures/cap-says.jpg')
+    +slide({header: "Плохой дизайн сложно превратить<br>в хороший код", shout: true, classes: 'label-header captain'})
+      p.captain-text
+        span.subtitle Долго и требует большого опыта
+      img.cover.width(src='pictures/cap.jpg')
     +slide({header: "Чек-лист требований к макетам", classes: "label-header"})
       ul
         li Обсуждение макетов ДО разработки
@@ -71,11 +74,17 @@ html(lang='ru')
         li.next Хаотичные отступы, размеры
         li.next Вообще все не очень
     +slide({header: "Плохой дизайн в коде", classes: "label-header"})
+      +cover('pictures/bad-code.jpg')
+      span.next
+        +cover('pictures/bad-code-2.jpg')
+      p.captain-text.next
+        span.subtitle П****Ц
     +slide({header: "Проще и дешевле исправить дизайн,<br>чем писать плохой код", shout: true, classes: 'label-header captain'})
       p.captain-text
         span.subtitle Клиенту тоже можно объяснить
       img.cover.width(src='pictures/cap.jpg')
     +slide({header: "Хороший UI Kit в коде", classes: "label-header"})
+      +cover('pictures/good-code.jpg')
     +slide({header: "Плохой код больно писать и поддерживать", shout: true, classes: 'label-header captain'})
       p.captain-text
         span.subtitle Никто не любит говнокод
@@ -116,9 +125,13 @@ html(lang='ru')
             li Сравнить макеты и реальность
         li Расширения в браузере
           ul
-            li PerfectPixel для Chrome https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?hl=ru
-            li Grid Ruler для Chrome https://chrome.google.com/webstore/detail/grid-ruler/joadogiaiabhmggdifljlpkclnpfncmj?hl=ru
-    +slide({header: "Увидел проблему в макете -<br>к дизайнеру и менеджеру", shout: true, classes: 'label-header captain'})
+            li
+              a(href="https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?hl=ru") PerfectPixel
+              |  накладывает картинку на страницу
+            li
+              a(href="https://chrome.google.com/webstore/detail/grid-ruler/joadogiaiabhmggdifljlpkclnpfncmj?hl=ru") Grid Ruler
+              |  удобно проверять выравнивание
+    +slide({header: "Увидел проблему в макете &mdash;<br>к дизайнеру и менеджеру", shout: true, classes: 'label-header captain'})
       p.captain-text
         span.subtitle
           span.strike Пусть знают как ты страдаешь
@@ -130,7 +143,7 @@ html(lang='ru')
         li Работает как задумано
         li Интерактивность на ховеры
         li Не ломается/обрезается ВНЕЗАПНО
-        li Нет ошибок в консоли
+        li Нет ошибок в DevTools
         li Интерфейс не зависает и не тормозит
     +slide({header: "2. Тестирование UX: чем проверять", classes: 'label-header'})
       ul
@@ -150,8 +163,8 @@ html(lang='ru')
         li Позитивные сценарии без ошибок и успешная отправка
         li Валидация и сообщения об ошибке
         li Прелоадеры, задержки ввода, не отправить дважды и т.д.
-        li Если пошаговая - проверять все
-    +slide({header: "Во время теста ты - злоумышленник", shout: true, classes: 'label-header captain'})
+        li Если пошаговая &mdash; проверять все
+    +slide({header: "Во время теста ты &mdash; злоумышленник", shout: true, classes: 'label-header captain'})
       p.captain-text
         span.subtitle Делай сайту больно!
       img.cover.width(src='pictures/cap.jpg')
@@ -198,6 +211,8 @@ html(lang='ru')
     +slide({header: "Ни один DevTools  не заменит реальный девайс", shout: true, classes: 'label-header captain'})
       img.cover.width(src='pictures/cap.jpg')
     +slide({header: "И это каждый раз проверять?!", shout: true, classes: 'label-header'})
+      p.captain-text.next
+        span.subtitle Да
       img.cover.width(src='pictures/cover-blur.jpg')
     +slide({header: "Смоки-тесты для каждого ПР", classes: "label-header"})
       ul
@@ -208,7 +223,7 @@ html(lang='ru')
         li Доки, тесты, README исправлены
     +slide({header: "А если нашел баг не там, где сейчас делаешь?", shout: true, classes: 'label-header'})
       img.cover.width(src='pictures/cover-blur.jpg')
-    +slide({header: "Видишь баг - исправь", shout: true, classes: 'label-header captain'})
+    +slide({header: "Видишь баг &mdash; исправь", shout: true, classes: 'label-header captain'})
       p.captain-text.next
         span.subtitle Даже если делал не ты
       p.captain-text.next
@@ -216,7 +231,7 @@ html(lang='ru')
       p.captain-text.next
         span.subtitle Даже если кажется, что “и так сойдет”
       img.cover.width(src='pictures/cap.jpg')
-    +slide({header: "Исправить долго -<br>заводи баг и TODO в код", shout: true, classes: 'label-header captain'})
+    +slide({header: "Исправить долго &mdash;<br>заводи баг и TODO в код", shout: true, classes: 'label-header captain'})
       p.captain-text
         span.subtitle И говори менеджеру
       img.cover.width(src='pictures/cap.jpg')
