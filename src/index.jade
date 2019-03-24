@@ -66,13 +66,18 @@ html(lang='ru')
       p.captain-text
         span.subtitle Он мыслит и рисует на плоскости
       img.cover.width(src='pictures/cap.jpg')
-    +slide({header: "Шаги к провалу с этапа дизайна", classes: "label-header"})
+    +slide({header: "Шаги к провалу с этапа дизайна", classes: "label-header clear"})
       ul
         li Нет UI Kit, или он плохой
-        li.next Кардинальные изменения UX при Responsive
+          +cover('pictures/halfs/no-uikit.jpg')
+        li.next Кардинальные изменения UX при RWD
+          +cover('pictures/halfs/rwd.jpg')
         li.next Макеты не по сетке, если она есть
+          +cover('pictures/halfs/bad-mockup.jpg')
         li.next Хаотичные отступы, размеры
+          +cover('pictures/halfs/rythm.jpg')
         li.next Вообще все не очень
+          +cover('pictures/halfs/bad.jpg')
     +slide({header: "Плохой дизайн в коде", classes: "label-header"})
       +cover('pictures/bad-code.jpg')
       span.next
@@ -96,34 +101,43 @@ html(lang='ru')
     +slide({header: "Хороший дизайн", classes: "label-header"})
       ul
         li Типографика для всех версий
-        li Используются стили текста, цвета и т.д. только из UI Kit
-        li Есть вертикальный ритм
-        li Нет диких перестроений элементов или UX на разных разрешениях
-        li Интерфейс делится на компоненты
-      p
+          +cover('pictures/halfs/typography.jpg')
+        li.next Используются стили текста, цвета и т.д. только из UI Kit
+          +cover('pictures/halfs/ui-kit.jpg')
+        li.next Нет диких перестроений при RWD
+          +cover('pictures/halfs/rwd2.jpg')
+        li.next Интерфейс делится на компоненты
+          +cover('pictures/halfs/components.jpg')
+      p.next
         span.subtitle Системный, продуманный, логичный
     +slide({header: "Как тестировать", shout: true, classes: 'label-header'})
       img.cover.width(src='pictures/cover-blur.jpg')
     +slide({header: "Ручное тестирование", classes: 'label-header'})
       ol
         li Визуальное соответствие макету
-        li Поведение (UX)
-        li Responsive (“дрочим” окошком)
-        li Кроссбраузерность и кроссплатформенность
+          +cover('pictures/halfs/diff.jpg')
+        li.next Поведение (UX)
+          +cover('pictures/halfs/ux.jpg')
+        li.next Responsive
+          video(src='pictures/window-terebonk.mp4', class='place right cover height' autoplay muted loop playsinline)
+        li.next Кроссбраузерность и кроссплатформенность
           ul
             li Пункты 1-3 в других браузерах и на других устройствах
+          +cover('pictures/halfs/devices.jpg')
     +slide({header: "1. Верстка: чек-лист", classes: 'label-header'})
       ul
         li Выглядит как на макете во всех разрешениях
-        li Не ломается при изменении ширины И ВЫСОТЫ
-        li Проверить ВСЕ вхождения
-        li Тянется/обрезается при разном контенте
+        li.next Не ломается при изменении ширины И ВЫСОТЫ
+        li.next Проверить ВСЕ вхождения
+        li.next Тянется/обрезается при разном контенте
+      +cover('pictures/halfs/check.jpg')
     +slide({header: "1. Верстка: чем проверять", classes: 'label-header'})
       ul
         li Глазами
           ul
             li Сравнить макеты и реальность
-        li Расширения в браузере
+          +cover('pictures/halfs/watch.jpg')
+        li.next Расширения в браузере
           ul
             li
               a(href="https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?hl=ru") PerfectPixel
@@ -131,6 +145,7 @@ html(lang='ru')
             li
               a(href="https://chrome.google.com/webstore/detail/grid-ruler/joadogiaiabhmggdifljlpkclnpfncmj?hl=ru") Grid Ruler
               |  удобно проверять выравнивание
+          +cover('pictures/halfs/tools.jpg')
     +slide({header: "Увидел проблему в макете &mdash;<br>к дизайнеру и менеджеру", shout: true, classes: 'label-header captain'})
       p.captain-text
         span.subtitle
@@ -141,29 +156,34 @@ html(lang='ru')
     +slide({header: "2. Тестирование UX: чек-лист", classes: 'label-header'})
       ul
         li Работает как задумано
-        li Интерактивность на ховеры
-        li Не ломается/обрезается ВНЕЗАПНО
-        li Нет ошибок в DevTools
-        li Интерфейс не зависает и не тормозит
+        li.next Интерактивность на ховеры
+        li.next Не ломается/обрезается ВНЕЗАПНО
+        li.next Нет ошибок в DevTools
+        li.next Интерфейс не зависает и не тормозит
+      +cover('pictures/halfs/check.jpg')
     +slide({header: "2. Тестирование UX: чем проверять", classes: 'label-header'})
       ul
         li Глазами
           ul
             li Все должно работать по ТЗ (не по ТЗ тоже должно работать)
-        li Руками
+          +cover('pictures/halfs/watch2.jpg')
+        li.next Руками
           ul
             li Кликать, водить курсором, тыкать пальцем
             li Все возможные и невозможные сценарии
             li Даже есть кажется, что так не будут делать (БУДУТ!)
-        li Доступность
+          +cover('pictures/halfs/hands.jpg')
+        li.next Доступность
           ul
             li Перемещение по табам
+          +cover('pictures/halfs/a11y.jpg')
     +slide({header: "2. Тестирование форм: чек-лист", classes: 'label-header'})
       ul
-        li Позитивные сценарии без ошибок и успешная отправка
-        li Валидация и сообщения об ошибке
-        li Прелоадеры, задержки ввода, не отправить дважды и т.д.
-        li Если пошаговая &mdash; проверять все
+        li Успешная отправка без ошибок
+        li.next Валидация и сообщения об ошибках
+        li.next Прелоадеры, debounce, не отправить дважды и т.д.
+        li.next Если пошаговая &mdash; проверять все
+      +cover('pictures/halfs/forms.jpg')
     +slide({header: "Во время теста ты &mdash; злоумышленник", shout: true, classes: 'label-header captain'})
       p.captain-text
         span.subtitle Делай сайту больно!
