@@ -43,20 +43,16 @@ html(lang='ru')
         li.next Виды тестирования фронтенда
         li.next Как тестировать
         li.next Чем тестировать
-      img.cover.width.next(src='pictures/cap-says.jpg')
-    +slide({header: "Плохой дизайн сложно превратить<br>в хороший код", shout: true, classes: 'label-header captain'})
-      p.captain-text
-        span.subtitle Долго и требует большого опыта
-      img.cover.width(src='pictures/cap.jpg')
-    +slide({header: "Чек-лист требований к макетам", classes: "label-header"})
+      img.cover.width(src='pictures/cap-says.jpg')
+    +slide({header: "Перед началом работы", classes: "label-header"})
       ul
         li Обсуждение макетов ДО разработки
           +cover('pictures/halfs/comment.jpg')
-        li.next UI Kit
+        li.next Просить UI Kit
           +cover('pictures/halfs/ui-kit.jpg')
           ul.next
             li (!) Элементы отрисованы для всех версий
-            li Шрифты и типографика, цвета
+            li Шрифты и типографика
             li Цвета, гадиенты, тени и скругления блоков
             li Кнопки и элементы форм
             li Иконки
@@ -65,6 +61,10 @@ html(lang='ru')
     +slide({header: "Дизайнер не обязан знать<br>возможности верстки", shout: true, classes: 'label-header captain'})
       p.captain-text
         span.subtitle Он мыслит и рисует на плоскости
+      img.cover.width(src='pictures/cap.jpg')
+    +slide({header: "Плохой дизайн сложно превратить<br>в хороший код", shout: true, classes: 'label-header captain'})
+      p.captain-text
+        span.subtitle Долго и требует большого опыта
       img.cover.width(src='pictures/cap.jpg')
     +slide({header: "Шаги к провалу с этапа дизайна", classes: "label-header clear"})
       ul
@@ -95,7 +95,7 @@ html(lang='ru')
         span.subtitle Никто не любит говнокод
       img.cover.width(src='pictures/cap.jpg')
     +slide({header: "Не пиши говнокод", shout: true, classes: 'label-header captain'})
-      p.captain-text.next
+      p.captain-text
         span.subtitle Пиши хороший код
       img.cover.width(src='pictures/cap.jpg')
     +slide({header: "Хороший дизайн", classes: "label-header"})
@@ -239,13 +239,13 @@ html(lang='ru')
       p.captain-text.next
         span.subtitle Да
       img.cover.width(src='pictures/cover-blur.jpg')
-    +slide({header: "Смоки-тесты для каждого ПР", classes: "label-header"})
+    +slide({header: "Минимальный набор тестов", classes: "label-header"})
       ul
         li Картинка соответствует макету на всех разрешениях
         li Ожидаемое поведение по ТЗ
         li Изменение ширины и высоты не ломает ничего
         li Нет ошибок в консоли и DevTools
-        li Доки, тесты, README исправлены
+        li Проверено в вечнозеленых мобильных и десктопах
       +cover('pictures/halfs/smoke.jpg')
     +slide({header: "А если нашел баг не там, где сейчас делаешь?", shout: true, classes: 'label-header'})
       img.cover.width(src='pictures/cover-blur.jpg')
