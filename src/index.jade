@@ -188,29 +188,34 @@ html(lang='ru')
       p.captain-text
         span.subtitle Делай сайту больно!
       img.cover.width(src='pictures/cap.jpg')
-    +slide({header: "3. Responsive: чек-лист", classes: "label-header"})
+    +slide({header: "3. Responsive: чек-лист", classes: "label-header clear"})
       ul
-        li На всех разрешениях
+        li На всех разрешениях своего компьютера
           ul
             li На маленьких (320х300)
             li На больших (два монитора)
             li При зуме + и -
             li В мобильном фрейме DevTools и без
-        li На реальных девайсах в основных браузерах
+          +cover('pictures/halfs/recursion.jpg')
+        li.next На реальных девайсах
+          +cover('pictures/halfs/farm.jpg')
     +slide({header: "4. Кроссплатформенность и кроссбраузерность", classes: "label-header"})
       ul
-        li Обязательно
+        li Windows и MacOS/iOS
           ul
-            li Safari для iOs и MacOS
-            li Chrome под Android
-        li Поворот экрана на устройстве
-        li Расширенный тест для...
+            li Вечнозеленые
+            li И остальные
+          +cover('pictures/halfs/browsers.jpg')
+        li.next Поворот экрана на устройстве
+          +cover('pictures/halfs/rotate.jpg')
+        li.next Расширенный тест для...
           ul
             li Неполной поддержки, префиксы
             li Формы и интерактивные элементы
             li Модальные окошки и попапы
             li Анимации
             li Другие хаки или фоллбэки
+          +cover('pictures/halfs/support.jpg')
     +slide({header: "Как отлаживать на девайсах", classes: "label-header"})
       ul
         li
@@ -239,8 +244,9 @@ html(lang='ru')
         li Картинка соответствует макету на всех разрешениях
         li Ожидаемое поведение по ТЗ
         li Изменение ширины и высоты не ломает ничего
-        li Нет ошибок в консоли
+        li Нет ошибок в консоли и DevTools
         li Доки, тесты, README исправлены
+      +cover('pictures/halfs/smoke.jpg')
     +slide({header: "А если нашел баг не там, где сейчас делаешь?", shout: true, classes: 'label-header'})
       img.cover.width(src='pictures/cover-blur.jpg')
     +slide({header: "Видишь баг &mdash; исправь", shout: true, classes: 'label-header captain'})
@@ -265,6 +271,7 @@ html(lang='ru')
         li.next Проверяй за собой ПОСЛЕ работы
         li.next Не бойся обсуждать и вносить изменения в процессе
         li.next Будь ответственным, черт возьми!
+      +cover('pictures/halfs/i-do.jpg')
     +slide({header: "Не будь ленивым кодером", shout: true, classes: 'label-header captain'})
       p.captain-text.next
         span.subtitle Будь котиком!
