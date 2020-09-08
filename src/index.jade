@@ -239,7 +239,7 @@ html(lang='ru')
       p.captain-text.next
         span.subtitle Да
       img.cover.width(src='pictures/cover-blur.jpg')
-    +slide({header: "Минимальный набор тестов", classes: "label-header"})
+    +slide({header: "Минимальный набор тестов руками", classes: "label-header"})
       ul
         li Картинка соответствует макету на всех разрешениях
         li Ожидаемое поведение по ТЗ
@@ -247,6 +247,37 @@ html(lang='ru')
         li Нет ошибок в консоли и DevTools
         li Проверено в вечнозеленых мобильных и десктопах
       +cover('pictures/halfs/smoke.jpg')
+    +slide({header: "Автоматизированное тестирование", shout: true, classes: 'label-header'})
+    +slide({header: "Почему мы не пишем тесты", classes: 'label-header'})
+      ol
+        li "Cложно"
+        li "Дорого"
+        li "Нет времени"
+        li "Нет подходящих инструментов"
+        li "Для больших проектов"
+        li "Это не моя работа"
+    +slide({header: "Пирамида тестирования", classes: 'label-header'})
+      ol
+        li Unit, когда тестируется отдельная функция или модуль.
+        li Интеграционное, когда тестируются несколько модулей вместе.
+        li E2E, когда все приложение тестируется целиком, например, включая базу данных.
+    +slide({header: "МК Максима Соснова", classes: 'label-header'})
+    +slide({header: "Автоматизированное тестирование", classes: 'label-header'})
+      ol
+        li Линтеры и статические анализаторы
+        li Модульное тестирование
+        li Тестирование верстки
+        li Высокоуровневые тесты
+    +slide({header: "С чего начать, если ни разу не писал тесты", classes: 'label-header'})
+      ol
+        li Линтеры и статические анализаторы (ссылка на доклад)
+        li Найти части проекта, где чаще всего появляются баги
+        li Выбрать подходящий инструмент/библиотеку
+        li Встроить автотесты в процесс сборки
+    +slide({header: "Тестирование &mdash; это не страшно", shout: true, classes: 'label-header captain'})
+      p.captain-text
+        span.subtitle И не так долго и дорого
+      img.cover.width(src='pictures/cap.jpg')
     +slide({header: "А если нашел баг не там, где сейчас делаешь?", shout: true, classes: 'label-header'})
       img.cover.width(src='pictures/cover-blur.jpg')
     +slide({header: "Видишь баг &mdash; исправь", shout: true, classes: 'label-header captain'})
