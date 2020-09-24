@@ -249,32 +249,82 @@ html(lang='ru')
       +cover('pictures/halfs/smoke.jpg')
     +slide({header: "Автоматизированное тестирование", shout: true, classes: 'label-header'})
       img.cover.width(src='pictures/cover-blur.jpg')
-    +slide({header: "Почему мы не пишем тесты", classes: 'label-header'})
-      ol
-        li "Cложно"
-        li "Дорого"
-        li "Нет времени"
-        li "Нет подходящих инструментов"
-        li "Для больших проектов"
-        li "Это не моя работа"
-    +slide({header: "Пирамида тестирования", classes: 'label-header'})
-      ol
-        li Unit, когда тестируется отдельная функция или модуль.
-        li Интеграционное, когда тестируются несколько модулей вместе.
-        li E2E, когда все приложение тестируется целиком, например, включая базу данных.
-    +slide({header: "МК Максима Соснова", classes: 'label-header'})
+    +slide({header: "", shout: false, classes: ''})
+      h2.shout(style="color: white; font-size: 100px; left: 47%; width: 50%; text-align: left; top: 30%") Почему мы не&nbsp;пишем тесты?
+      img.cover.width(src='pictures/philosoraptor.jpg')
+    +slide({header: "Почему мы не&nbsp;пишем тесты", classes: 'label-header'})
+      ul.say
+        li «Cложно»
+          img.cover.width(src='pictures/complicated.jpg')
+    +slide({header: "", shout: false, classes: ''})
+      img.cover.width(src='pictures/jest.jpg')
+    +slide({header: "Почему мы не&nbsp;пишем тесты", classes: 'label-header'})
+      ul.say
+        li.disabled «Cложно»
+        li «Дорого»
+          img.cover.width(src='pictures/expensive.jpg')
+    +slide({header: "", shout: false, classes: ''})
+      img.cover.width(src='pictures/dev-vs-qa.jpg')
+      img.cover.width.next(src='pictures/dev-vs-qa-10.jpg')
+      img.cover.width.next(src='pictures/dev-vs-qa-100.jpg')
+    +slide({header: "Почему мы не&nbsp;пишем тесты", classes: 'label-header'})
+      ul.say
+        li.disabled «Cложно»
+        li.disabled «Дорого»
+        li «Нет времени»
+          img.cover.width(src='pictures/time.jpg')
+    +slide({header: "", shout: false, classes: ''})
+      img.cover.width(src='pictures/dev-vs-qa-100.jpg')
+    +slide({header: "Почему мы не&nbsp;пишем тесты", classes: 'label-header'})
+      ul.say
+        li.disabled «Cложно»
+        li.disabled «Дорого»
+        li.disabled «Нет времени»
+        li «Нет подходящих инструментов»
+          img.cover.width(src='pictures/nothing.jpg')
+    +slide({header: "", shout: false, classes: ''})
+      img.cover.width(src='pictures/npm.jpg')
+    +slide({header: "Почему мы не&nbsp;пишем тесты", classes: 'label-header'})
+      ul.say
+        li.disabled «Cложно»
+        li.disabled «Дорого»
+        li.disabled «Нет времени»
+        li.disabled «Нет подходящих инструментов»
+        li «Для больших проектов»
+          img.cover.width(src='pictures/cats.jpg')
+    +slide({header: "", shout: false, classes: ''})
+      img.cover.width(src='pictures/bugs.jpg')
+    +slide({header: "Почему мы не&nbsp;пишем тесты", classes: 'label-header'})
+      ul.say
+        li.disabled «Cложно»
+        li.disabled «Дорого»
+        li.disabled «Нет времени»
+        li.disabled «Нет подходящих инструментов»
+        li.disabled «Для больших проектов»
+        li «Это не моя работа»
+          img.cover.width(src='pictures/not-my-job.jpg')
+          img.cover.width.next(src='pictures/wtf.png')
+    +slide({header: "", classes: 'label-header'})
+      img.cover.width(src='pictures/sosnov.jpg')
     +slide({header: "Автоматизированное тестирование", classes: 'label-header'})
       ol
         li Линтеры и статические анализаторы
-        li Модульное тестирование
-        li Тестирование верстки
-        li Высокоуровневые тесты
-    +slide({header: "С чего начать, если ни разу не писал тесты", classes: 'label-header'})
+          img.cover.width(src='pictures/linters.jpg')
+        li.next Модульное тестирование
+          img.cover.width(src='pictures/state-of.jpg')
+        li.next Тестирование вёрстки
+        li.next Высокоуровневые тесты
+    +slide({header: "С чего начать писать тесты", classes: 'label-header'})
       ol
-        li Линтеры и статические анализаторы (ссылка на доклад)
-        li Найти части проекта, где чаще всего появляются баги
-        li Выбрать подходящий инструмент/библиотеку
-        li Встроить автотесты в процесс сборки
+        li Внедрить линтеры и статические анализаторы
+          img.cover.width(src='pictures/odessajs.jpg')
+        li.next Найти части проекта, где чаще всего появляются баги
+          img.cover.width(src='pictures/tut.jpg')
+        li.next Выбрать подходящий инструмент/библиотеку
+          img.cover.width(src='pictures/state-of-2.jpg')
+        li.next Встроить автотесты в процесс сборки
+          img.cover.width(src='pictures/ci.jpg')
+      a.copyright(href="https://youtu.be/gBgS5Fzhe5c") Как внедрить стандарты разработки (Youtube)
     +slide({header: "Тестирование &mdash; это не страшно", shout: true, classes: 'label-header captain'})
       p.captain-text
         span.subtitle И не так долго и дорого
@@ -303,10 +353,14 @@ html(lang='ru')
       img.cover.width(src='pictures/cap.jpg')
     +slide({header: "Подводя итог", classes: "label-header"})
       ul
-        li Смотри на дизайн ПЕРЕД работой
-        li.next Проверяй за собой ПОСЛЕ работы
+        li Смотри на дизайн
+          b  до
+          |  разработки
+        li.next Проверяй за собой
+          b  после
+          |  завершения работы
         li.next Не бойся обсуждать и вносить изменения в процессе
-        li.next Будь ответственным, черт возьми!
+        li.next Будь ответственным, чёрт возьми!
       +cover('pictures/halfs/i-do.jpg')
     +slide({header: "Не будь ленивым кодером", shout: true, classes: 'label-header captain'})
       p.captain-text.next

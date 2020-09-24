@@ -69,10 +69,23 @@ gray-color = #4a4a4a
             bottom: 15%;
             left 50%
             margin-left: -100px
+        &.copyright
+            position: absolute
+            right 10px
+            bottom 20px
+            transform: translateX(100%) rotate(-90deg)
+            transform-origin: 0 100%;
+            font-size: 12px
+            color: main-color
+
+            &.white
+                color: #fff
+
     li > ul > li
         color: #444;
         line-height: 30px;
         font-size: 20px;
+
 
 
 .html
@@ -320,3 +333,4 @@ mh = 25px
 
 .slide.no-number::after
     visibility: hidden
+
