@@ -29,13 +29,20 @@ html(lang='ru')
         | )
       img.cover(src='pictures/cover.jpg')
     +slide({header: "Кто я?", classes: "label-header right"})
-      ul
-        li Глава отдела фронтенда, LOVATA
-        li Full-stack Node.js разработчик
+      ul(style="font-size: 0.8em;")
+        li В профессии 10+ лет
+        li Была начальником отдела фронтенда
+        li Выгорела
+        li Уволилась и 6 месяцев не работала
+        li Поработала 6 месяцев, и опять уволилась
+        li Знаю всё о выгорании
+        li И немного о тестировании
       p
-        img.logo(src="pictures/minskcss.png")
-        img.logo(src="pictures/minskjs.png")
-        img.logo.css-m-js(src="pictures/css-minsk-js.svg")
+        img.logo(src="pictures/minskcss.png", style="width: auto; height: 75px; margin-top: 0")
+        img.logo(src="pictures/minskjs.png", style="width: auto; height: 75px; margin-top: 0")
+        img.logo.css-m-js(src="pictures/css-minsk-js.svg", style="width: 75px; height: 75px; margin-top: 0")
+        img.logo(src="pictures/fc.svg", style="width: 75px; height: 75px; margin-top: 0")
+
       img.cover.place.left(src='pictures/about-cover.jpg')
     +slide({header: "Очевидные очевидности", classes: "label-header"})
       ul
@@ -46,7 +53,7 @@ html(lang='ru')
       img.cover.width(src='pictures/cap-says.jpg')
     +slide({header: "Перед началом работы", classes: "label-header"})
       ul
-        li Обсуждение макетов ДО разработки
+        li Обсуждение макетов до разработки
           +cover('pictures/halfs/comment.jpg')
         li.next Просить UI Kit
           +cover('pictures/halfs/ui-kit.jpg')
@@ -58,7 +65,7 @@ html(lang='ru')
             li Иконки
     +slide({header: "", classes: "label-header"})
       +cover('pictures/ui-kit.jpg')
-    +slide({header: "Дизайнер не обязан знать<br>возможности верстки", shout: true, classes: 'label-header captain'})
+    +slide({header: "Дизайнер не обязан знать<br>возможности вёрстки", shout: true, classes: 'label-header captain'})
       p.captain-text
         span.subtitle Он мыслит и рисует на плоскости
       img.cover.width(src='pictures/cap.jpg')
@@ -76,7 +83,7 @@ html(lang='ru')
           +cover('pictures/halfs/bad-mockup.jpg')
         li.next Хаотичные отступы, размеры
           +cover('pictures/halfs/rythm.jpg')
-        li.next Вообще все не очень
+        li.next Вообще всё не очень
           +cover('pictures/halfs/bad.jpg')
     +slide({header: "Плохой дизайн в коде", classes: "label-header"})
       +cover('pictures/bad-code.jpg')
@@ -124,14 +131,17 @@ html(lang='ru')
           ul
             li Пункты 1-3 в других браузерах и на других устройствах
           +cover('pictures/halfs/devices.jpg')
-    +slide({header: "1. Верстка: чек-лист", classes: 'label-header'})
+    +slide({header: "1. Вёрстка: чек-лист", classes: 'label-header'})
       ul
         li Выглядит как на макете во всех разрешениях
-        li.next Не ломается при изменении ширины И ВЫСОТЫ
-        li.next Проверить ВСЕ вхождения
+        li.next Не ломается при изменении ширины
+          b  и высоты
+        li.next Проверить
+          b  все
+          |  вхождения
         li.next Тянется/обрезается при разном контенте
       +cover('pictures/halfs/check.jpg')
-    +slide({header: "1. Верстка: чем проверять", classes: 'label-header'})
+    +slide({header: "1. Вёрстка: чем проверять", classes: 'label-header'})
       ul
         li Глазами
           ul
@@ -149,7 +159,7 @@ html(lang='ru')
     +slide({header: "Увидел проблему в макете &mdash;<br>к дизайнеру и менеджеру", shout: true, classes: 'label-header captain'})
       p.captain-text
         span.subtitle
-          span.strike Пусть знают как ты страдаешь
+          span.strike Пусть знают, как ты страдаешь
         br
         span.subtitle Обсудить решение
       img.cover.width(src='pictures/cap.jpg')
@@ -157,7 +167,8 @@ html(lang='ru')
       ul
         li Работает как задумано
         li.next Интерактивность на ховеры
-        li.next Не ломается/обрезается ВНЕЗАПНО
+        li.next Не ломается/обрезается
+          b  внезапно
         li.next Нет ошибок в DevTools
         li.next Интерфейс не зависает и не тормозит
       +cover('pictures/halfs/check.jpg')
@@ -165,13 +176,15 @@ html(lang='ru')
       ul
         li Глазами
           ul
-            li Все должно работать по ТЗ (не по ТЗ тоже должно работать)
+            li Всё должно работать по ТЗ
+              br
+              span.next Не по ТЗ тоже должно работать
           +cover('pictures/halfs/watch2.jpg')
         li.next Руками
           ul
             li Кликать, водить курсором, тыкать пальцем
             li Все возможные и невозможные сценарии
-            li Даже есть кажется, что так не будут делать (БУДУТ!)
+            li Даже есть кажется, что так не будут делать (спойлер: будут)
           +cover('pictures/halfs/hands.jpg')
         li.next Доступность
           ul
@@ -182,7 +195,7 @@ html(lang='ru')
         li Успешная отправка без ошибок
         li.next Валидация и сообщения об ошибках
         li.next Прелоадеры, debounce, не отправить дважды и т.д.
-        li.next Если пошаговая &mdash; проверять все
+        li.next Если пошаговая &mdash; проверять все шаги
       +cover('pictures/halfs/forms.jpg')
     +slide({header: "Во время теста ты &mdash; злоумышленник", shout: true, classes: 'label-header captain'})
       p.captain-text
@@ -194,7 +207,7 @@ html(lang='ru')
           ul
             li На маленьких (320х300)
             li На больших (два монитора)
-            li При зуме + и -
+            li При зуме инфтерфейса на + и -
             li В мобильном фрейме DevTools и без
           +cover('pictures/halfs/recursion.jpg')
         li.next На реальных девайсах
@@ -257,6 +270,7 @@ html(lang='ru')
         li «Cложно»
           img.cover.width(src='pictures/complicated.jpg')
     +slide({header: "", shout: false, classes: ''})
+      a.copyright(href="https://jestjs.io/docs/en/getting-started") Jest Docs
       img.cover.width(src='pictures/jest.jpg')
     +slide({header: "Почему мы не&nbsp;пишем тесты", classes: 'label-header'})
       ul.say
@@ -267,6 +281,7 @@ html(lang='ru')
       img.cover.width(src='pictures/dev-vs-qa.jpg')
       img.cover.width.next(src='pictures/dev-vs-qa-10.jpg')
       img.cover.width.next(src='pictures/dev-vs-qa-100.jpg')
+      img.cover.width.next(src='pictures/dev-vs-qa-boom.jpg')
     +slide({header: "Почему мы не&nbsp;пишем тесты", classes: 'label-header'})
       ul.say
         li.disabled «Cложно»
@@ -274,7 +289,8 @@ html(lang='ru')
         li «Нет времени»
           img.cover.width(src='pictures/time.jpg')
     +slide({header: "", shout: false, classes: ''})
-      img.cover.width(src='pictures/dev-vs-qa-100.jpg')
+      img.cover.width(src='pictures/dev-vs-qa.jpg')
+      img.cover.width.next(src='pictures/dev-vs-qa-boom.jpg')
     +slide({header: "Почему мы не&nbsp;пишем тесты", classes: 'label-header'})
       ul.say
         li.disabled «Cложно»
